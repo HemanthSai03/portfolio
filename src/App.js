@@ -172,7 +172,12 @@ function App() {
   };
 
   const handleDownload = () => {
-    console.log("Download resume");
+    const link = document.createElement('a');
+    link.href = '/HEMANTH_SAI_resume (7).pdf';
+    link.download = 'Hemanth_Sai_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const navItems = [
