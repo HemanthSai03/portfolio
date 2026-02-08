@@ -173,7 +173,7 @@ function App() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/HEMANTH_SAI_resume (7).pdf';
+    link.href = process.env.PUBLIC_URL + '/resume.pdf';
     link.download = 'Hemanth_Sai_Resume.pdf';
     document.body.appendChild(link);
     link.click();
