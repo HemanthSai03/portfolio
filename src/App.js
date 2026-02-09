@@ -33,6 +33,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import TechStack from './components/TechStack';
+import Contact from './components/Contact';
 
 const getDesignTokens = (mode) => ({
   palette: {
@@ -185,6 +186,7 @@ function App() {
     { label: 'Experience', id: 'experience' },
     { label: 'Projects', id: 'projects' },
     { label: 'Skills', id: 'skills' },
+    { label: 'Contact Me', id: 'contact' },
   ];
 
   const toggleSearch = () => {
@@ -524,6 +526,7 @@ function App() {
         <Projects />
         <TechStack />
         <Skills />
+        <Contact />
 
       </Box>
     </ThemeProvider>

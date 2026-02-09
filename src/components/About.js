@@ -1,5 +1,8 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Container, Grid, Typography, useTheme, useMediaQuery, IconButton, Stack } from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 import image1 from '../assets/image1.png';
 
 const About = () => {
@@ -20,6 +23,46 @@ const About = () => {
                     <Typography variant="body1" sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.8, color: 'text.secondary', maxWidth: { xs: '100%', md: '90%' }, mx: { xs: 'auto', md: 0 } }}>
                         Software Engineer with 2 years of experience in client-facing service-based projects. Specialized in developing and enhancing enterprise applications using React, Node.js, and Modern JavaScript.
                     </Typography>
+
+                    <Stack direction="row" spacing={2} sx={{ mt: 3, justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                        <IconButton
+                            component="a"
+                            href="https://www.linkedin.com/in/hemanth-sai-696219276/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{
+                                color: '#0A66C2', // LinkedIn blue
+                                '&:hover': { transform: 'scale(1.1)', bgcolor: 'rgba(10, 102, 194, 0.1)' },
+                                transition: 'all 0.3s'
+                            }}
+                        >
+                            <LinkedInIcon fontSize="large" />
+                        </IconButton>
+                        <IconButton
+                            component="a"
+                            href="https://github.com/HemanthSai03"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{
+                                color: 'text.primary',
+                                '&:hover': { transform: 'scale(1.1)', bgcolor: 'action.hover' },
+                                transition: 'all 0.3s'
+                            }}
+                        >
+                            <GitHubIcon fontSize="large" />
+                        </IconButton>
+                        <IconButton
+                            component="a"
+                            href="mailto:hemanthsai0119@gmail.com"
+                            sx={{
+                                color: '#EA4335', // Gmail red
+                                '&:hover': { transform: 'scale(1.1)', bgcolor: 'rgba(234, 67, 53, 0.1)' },
+                                transition: 'all 0.3s'
+                            }}
+                        >
+                            <EmailIcon fontSize="large" />
+                        </IconButton>
+                    </Stack>
                 </Box>
             </Grid>
 
